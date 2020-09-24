@@ -127,9 +127,12 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  game_hash.each do ||
-    if player_name == inner_value[:player_name]
-      return inner_value[:points]
+  game_hash.each do |outer_key, outer_value|
+    
+      if player_name == inner_value[:player_name]
+        return inner_value[:points]
+      end
+      
   end
 end
 
