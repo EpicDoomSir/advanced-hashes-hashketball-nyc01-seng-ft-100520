@@ -1,3 +1,4 @@
+require 'pry'
 # Write your code below game_hash
 def game_hash
   {
@@ -128,7 +129,7 @@ end
 
 def num_points_scored(player_name)
   game_hash.each do |outer_key, outer_value|
-    
+    binding.pry
       if player_name == inner_value[:player_name]
         return inner_value[:points]
       end
